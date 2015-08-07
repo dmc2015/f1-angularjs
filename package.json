@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/dmc2015/toptal-first-angularjs/issues"
   },
-  "homepage": "https://github.com/dmc2015/toptal-first-angularjs#readme"
+  "homepage": "https://github.com/dmc2015/toptal-first-angularjs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "jshint-stylish": "^2.0.1"
+  }
 }
