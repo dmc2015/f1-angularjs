@@ -1,0 +1,22 @@
+{
+  "name": "toptal-first-angular-app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dmc2015/toptal-first-angularjs",
+  "authors": [
+    "Don McLamb <mclamb.donald@gmail.com>"
+  ],
+  "description": "toptal-first-angularjs",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
