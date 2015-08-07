@@ -1,0 +1,24 @@
+{
+  "name": "toptal-first-angular-app",
+  "version": "1.0.0",
+  "description": "toptal-first-angularjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmc2015/toptal-first-angularjs.git"
+  },
+  "keywords": [
+    "angular",
+    "js",
+    "toptal"
+  ],
+  "author": "don mclamb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmc2015/toptal-first-angularjs/issues"
+  },
+  "homepage": "https://github.com/dmc2015/toptal-first-angularjs#readme"
+}
