@@ -11,10 +11,6 @@ angular.module('F1FeederApp.controllers', [])
     return !$scope.nameFilter || keyword.test(driver.Driver.givenName) || keyword.test(driver.Driver.familyName);
   };
 
-
-
-
-
   ergastAPIservice.getDrivers().success(function (response){
     $scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
   });
