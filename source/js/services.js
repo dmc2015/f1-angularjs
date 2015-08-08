@@ -9,9 +9,20 @@ angular.module('F1FeederApp.services', [])
       url: 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
       });
 
-    };
+    }
 
+    ergastAPI.getDriverDetails = function(id) {
+      return $http({
+        method: 'JSONP',
+        url: 'http://ergast.com/api/f1/2013/drivers/'+ id + '/driverStandings.json?callback=JSON_CALLBACK'
+      });
 
-  return ergastAPI;
+    ergastAPI.getDriverDetails = function(id) {
+      return $http({
+        method: 'JSONP',
+        url: 'http://ergast.com/api/f1/2013/drivers/' + id + '/driverStandings.json?callback=JSON_CALLBACK'
+      });
+    }
 
+    return ergastAPI;
 });
