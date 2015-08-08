@@ -1,28 +1,10 @@
 angular.module('F1FeederApp.controllers', [])
-.controller('driversController', function($scope){
-  $scope.driversList = [{
-    Driver: {
-      givenName: 'Sebastian',
-      familyName: 'Vettel'
-    },
-    points: 332,
-    nationality: 'German',
-    Constructors: [
-      {name: 'Red Bull'}
-    ]
-  },
+  .controller('driversController', function($scope, ergastAPIservice){
+    $scope.nameFilter = null;
+    $scope.driversList = [];
 
-  {
-    Driver: {
-      givenName: 'Fernando',
-      familyName: 'Alonso'
-    },
-    points: 207,
-    nationality: 'Spanish',
-    Constructors: [
-      {name: 'Ferrari'}
-    ]
-  }
+    ergastAPIservice.getDrivers().success(function (response){
+      $scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+    });
 
-];
 });
