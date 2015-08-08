@@ -3,7 +3,11 @@
 <html>
   <head>
     <title>F-1 Feeder</title>
+
+
   </head>
+
+
 
   <body ng-app="F1FeederApp" ng-controller="driversController">
     <input type="text" ng-model="nameFilter" placeholder="Search Name"/>
@@ -12,7 +16,9 @@
         <tr><th colsapn="4"> Drivers Championship Standings</th></tr>
       </thead>
       <tbody>
-        <tr ng-repeat="driver in driversList">
+        <!-- <tr ng-repeat="driver in driversList"> -->
+          <tr ng-repeat="driver in driversList | filter: searchFilter">
+
           <td>{{$index + 1}}</td>
           <td>
             <img src="img/flags/{{driver.Driver.nationality}}.png" />
