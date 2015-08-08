@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>F-1 Feeder</title>
+  </html>
+
+  <body ng-app="F1FeederApp" ng-controller="driversController">
+    <table>
+      <thead>
+        <tr><th colsapn="4"> Drivers Championship Standings</th></tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="driver in driversList">
+          <td>{{$index + 1}}</td>
+          <td>
+            <img src="img/flags/{{driver.Driver.nationality}}.png" />
+            {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familiyName}}
+          </td>
+          <td>{{driver.Constructors[0].name}}</td>
+          <td>{{driver.points[0].name}}</td>
+        </tr>
+
+      </tbody>
+
+    </table>
