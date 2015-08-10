@@ -20,7 +20,17 @@
     <script src="source/js/app.js"></script>
     <script src="source/js/services.js"></script>
     <script src="source/js/controllers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+      var XML = null;
+      $(function(){
+        $.get("http://api.geonames.org/countryInfo", {"username":"demo"}, function(d){
+          XML = d;
+          console.log(XML);
+        });
 
+      })
+    </script>
     <!--
     <script src="prod/js/app.js"></script>
     <script src="prod/js/services.js"></script>

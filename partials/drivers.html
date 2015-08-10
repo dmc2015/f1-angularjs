@@ -4,10 +4,10 @@
     <tr><th colspan="4">Drivers Championship Standings</th></tr>
   </thead>
   <tbody>
-    <tr ng-repeat="driver in driversList | filter: searchFilter">
+    <tr ng-repeat="driver in driversList | filter: searchFilter" class="driver" data-id="{driver.Driver.nationality}">
       <td>{{$index + 1}}</td>
       <td>
-        <img src="img/flags/{{driver.Driver.nationality}}.png"/>
+        <img src="img/flags/{{countries-json[driver.Driver.nationality]}}.gif"/>
 
         <a href="#/drivers/{{driver.Driver.driverId}}">
           {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
@@ -19,3 +19,12 @@
     </tr>
   </tbody>
 </table>
+<script>
+  $(function(){
+      $(".driver").each(function(k, v){
+          console.log(v)
+          console.log(v.attr("data-id"));
+
+      })
+  });
+</script>
