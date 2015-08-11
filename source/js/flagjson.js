@@ -453,7 +453,7 @@ Tuvalu 	Tuvaluan
 Uganda 	Ugandan
 Ukraine 	Ukrainian
 United Arab Emirates 	Emirian
-United Kingdom 	Briton or British (collective) (or Englishman or Englishwoman) (or Scot or Scotsman or Scotswoman) (or Welshman or Welshwoman) (or Northern Irishman or Northern Irishwoman or Irish [collective] or Northern Irish [collective])
+United Kingdom 	Briton
 United States 	American
 Uruguay 	Uruguayan
 Uzbekistan 	Uzbek or Uzbekistani
