@@ -29,20 +29,20 @@ angular.module('F1FeederApp.services', [])
 });
 
 
-angular.module('FlagApp.services', [])
-  .factory('flagAPIservice', function($http){
-    var flagAPI = {};
-    var countryCode = driver.Driver
-
-    flagAPI.getFlags = function(countryCode) {
-      var countryXML = "http://api.geonames.org/countryInfo?username=demo",
-        country = $scope.drivesList.Driver.nationality,
-        countryCode = $scope.drivesList.Driver.nationality;
-
-      return flagAPI({
-        url: 'http://www.geonames.org/flags/x/' + countryCode + '.gif'
-      });
-
-    };
-    return flagAPI
-  })
+// angular.module('FlagApp.services', [])
+//   .factory('flagAPIservice', function($http){
+//     var flagAPI = {};
+//     var countryCode = driver.Driver
+//
+//     flagAPI.getFlags = function(countryCode) {
+//       var countryXML = "http://api.geonames.org/countryInfo?username=demo",
+//         country = $scope.drivesList.Driver.nationality,
+//         countryCode = $scope.drivesList.Driver.nationality;
+//
+//       return flagAPI({
+//         url: 'http://www.geonames.org/flags/x/' + countryCode + '.gif'
+//       });
+//
+//     };
+//     return flagAPI
+//   })

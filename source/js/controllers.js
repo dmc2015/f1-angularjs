@@ -11,6 +11,17 @@ angular.module('F1FeederApp.controllers', [])
   ergastAPIservice.getDrivers().success(function (response){
     $scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
     console.log($scope.driversList);
+
+    $scope.driversList.forEach(function(d){
+      d.flagUrl = flagUrl(nationality[d.Driver.nationality]);
+    });
+    function flagUrl(countryCode){
+      if(!countryCode) {return;}
+      var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+      console.log(url);
+      return url;
+    }
+
   });
 })
 
