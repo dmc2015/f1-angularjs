@@ -87,6 +87,7 @@ var countries = {
 "France":"fr",
 "Gabon":"ga",
 "United Kingdom":"gb",
+"Britian":"gb",
 "Grenada":"gd",
 "Georgia":"ge",
 "French Guiana":"gf",
@@ -266,6 +267,13 @@ var countries = {
 var nationality = {
 "Spanish": countries.Spain,
 "German": countries.Germany,
+"Australian": countries.Australia,
+"British": countries.Britian,
+"Finnish": countries.Finland,
+"French": countries.France,
+"Brazilian": countries.Brazil,
+"Mexican": countries.Mexico,
+"Venezuelan": countries.Venezuela,
 };
 
 // var nationality = [
