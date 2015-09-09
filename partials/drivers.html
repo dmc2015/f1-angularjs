@@ -1,23 +1,61 @@
-<div>
-<input type="text" ng-model="nameFilter" placeholder="Search..."/>
-<table>
-  <thead>
-    <tr><th colspan="4">Drivers Championship Standings</th></tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="driver in driversList | filter: searchFilter">
-      <td>{{$index + 1}}</td>
-      <td>
-        <img ng-src="{{driver.flagUrl}}"/>
+<div class="">
+  <input type="text" ng-model="nameFilter" placeholder="Search..."/>
 
-        <a href="#/drivers/{{driver.Driver.driverId}}">
-          {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-        </a>
-      </td>
+  <div class="table row ">
 
-      <td>{{driver.Constructors[0].name}}</td>
-      <td>{{driver.points}}</td>
-    </tr>
-  </tbody>
-</table>
+    <div class="headings  col-lg-12">
+      <h1 class="text-center header-standings">Drivers Championship Standings</h1>
+      <h2 class="text-center headings">
+        <span class="driver col-sm-1 col-md-offset-1">Driver Name</span>
+        <span class="nationality col-sm-1 col-md-offset-1">Driver Nationality</span>
+        <span class="make col-sm-1 col-md-offset-1">Constructor/Make</span>
+        <span class="points-column col-sm-1 col-md-offset-1">Points</span>
+      </h2>
+
+    </div>
+
+    <div class="table-striped">
+
+      <div class="driver-info" ng-repeat="driver in driversList | filter: searchFilter">
+          <div class="driver-num"> {{$index + 1}}</div>
+          <div>
+            <img class="flag" ng-src="{{driver.flagUrl}}"/>
+          </div>
+
+          <div>
+            <a class="btn btn-primary " href="#/drivers/{{driver.Driver.driverId}}">
+              {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+            </a>
+          </div>
+
+          <div class="">{{driver.Constructors[0].name}}</div>
+          <div class="points">{{driver.points}}</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <table>
+    <thead>
+      <tr><th colspan="1">Drivers Championship Standings</th></tr>
+      <tr><th colspan="2">Constructor/Make</th></tr>
+      <tr><th colspan="3">Points</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="driver in driversList | filter: searchFilter">
+        <td>{{$index + 1}}</td>
+        <td>
+          <img class="flag" ng-src="{{driver.flagUrl}}"/>
+
+          <a href="#/drivers/{{driver.Driver.driverId}}">
+            {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+          </a>
+        </td>
+
+        <td>{{driver.Constructors[0].name}}</td>
+        <td>{{driver.points}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
