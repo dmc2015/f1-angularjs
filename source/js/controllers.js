@@ -16,7 +16,7 @@ angular.module('F1FeederApp.controllers', [])
       d.flagUrl = flagUrl(nationality[d.Driver.nationality]);
     });
     function flagUrl(countryCode){
-      if(!countryCode) {return;}
+      if(!countryCode) {return console.log('no code', countryCode, err);}
       var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
       console.log(url);
       return url;
