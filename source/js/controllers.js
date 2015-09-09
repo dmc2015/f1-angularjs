@@ -1,5 +1,5 @@
 angular.module('F1FeederApp.controllers', [])
-.controller('driversController', function($scope, ergastAPIservice){
+.controller('driversController', function($scope, ergastAPIservice, flagUrl){
   $scope.nameFilter = null;
   $scope.driversList = [];
   $scope.searchFilter = function(driver){
@@ -13,14 +13,9 @@ angular.module('F1FeederApp.controllers', [])
     console.log($scope.driversList);
 
     $scope.driversList.forEach(function(d){
-      d.flagUrl = flagUrl(nationality[d.Driver.nationality]);
+      d.flagUrl = flagUrl.getUrl(nationality[d.Driver.nationality]);
     });
-    function flagUrl(countryCode){
-      if(!countryCode) {return console.log('no code', countryCode, url);}
-      var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
-      console.log(url);
-      return url;
-    }
+
 
   });
 })
@@ -32,19 +27,29 @@ angular.module('F1FeederApp.controllers', [])
 //   return url;
 // }])
 
-.controller('driverController', function($scope, $routeParams, ergastAPIservice){
+.controller('driverController', function($scope, $routeParams, ergastAPIservice, flagUrl){
   $scope.id = $routeParams.id;
   $scope.races = [];
   $scope.driver = null;
 
-  function flagUrl(countryCode){
 
 
-    if(!countryCode) {return console.log('no code', countryCode, url);}
-    var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
-    console.log(url);
-    return url;
-  }
+
+  // console.log(raceName)
+  // ext = new RegExp(/[^\s]+/);
+  // // raceCountry = raceName.search(ext);
+  // console.log($scope.races[0].raceName);
+  // extCountry = ext.exec(raceName);
+  // console.log(extCountry);
+  //
+  // console.log('this is the country of the race :  ' , raceName, ',  extracted country: ', extCountry);
+  // // console.log( raceCountry );
+  //
+  // if(!countryCode) {return console.log('no code', countryCode, url);}
+  // var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+  // console.log(url);
+  // return url;
+  //}
 
   ergastAPIservice.getDriverDetails($scope.id).success(function (response){
     $scope.driver = response.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
@@ -56,22 +61,50 @@ angular.module('F1FeederApp.controllers', [])
   //   });
   //
   //
-  // function flagUrl(countryCode){
-  //   if(!countryCode) {return;}
-  //   var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
-  //   console.log(url);
-  //   return url;
-  // }
 
 
   ergastAPIservice.getDriverRaces($scope.id).success(function (response){
     $scope.races = response.MRData.RaceTable.Races;
-    raceName = $scope.races[0].raceName;
-    extractor = new RegExp('[^\s]+');
-    raceCountry = raceName.search(extractor);
-    console.log($scope.races[0].raceName);
 
-    console.log('this is the country of the race :  ' , raceCountry);
+    // $scope.races. = function flagUrl(countryCode){
+
+    // $scope.driversList.forEach(function(d){
+    //   d.flagUrl = flagUrl(nationality[d.Driver.nationality]);
+    // });
+
+    $scope.races.forEach(function(d){
+      //assigns to the race object
+      d.raceCountry = raceLocation(d.raceName);
+      d.flagUrl = flagUrl.getUrl(d.raceCountry);
+      // d.raceCountry = raceLocation($scope.races[0].raceName);
+    });
+
+    console.log($scope.races);
+
+   function raceLocation(raceName) {
+      // $scope.races.raceName = $scope.races[0].raceName;
+      ext = new RegExp(/[^\s]+/);
+      extCountry = ext.exec(raceName);
+      // console.log(extCountry);
+
+      return nationality[extCountry[0]];
+    };
+
+
+
+
+    // function flagUrl(countryCode){
+    //   if(!countryCode) {return;}
+    //   var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+    //   console.log(url);
+    //   return url;
+    // }
+
+
+
+
+
+
   });
 
 });

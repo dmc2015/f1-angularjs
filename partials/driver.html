@@ -31,7 +31,7 @@
         </tr>
         <tr ng-repeat="race in races">
           <td>{{race.round}}</td>
-          <td><img ng-src="{{driver.flagUrl}}"/> {{race.raceName}}</td>
+          <td><img ng-src="{{race.flagUrl}}"/> {{race.raceName}}</td>
 
           <!-- <td><img src="img/flags/{{race.Circuit.Location.country}}.png"/> {{race.raceName}}</td> -->
           <td>{{race.Results[0].Consturctor.name}}</td>

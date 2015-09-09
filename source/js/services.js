@@ -26,7 +26,19 @@ angular.module('F1FeederApp.services', [])
     };
 
     return ergastAPI;
+})
+.factory('flagUrl', function(){
+  var apiUrl = {};
+
+  apiUrl.getUrl = function(countryCode) {
+    if(!countryCode) {return console.log('no code', countryCode, url);}
+    var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+    console.log(url);
+    return url;
+  }
+  return apiUrl;
 });
+
 
 
 // angular.module('FlagApp.services', [])
