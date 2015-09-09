@@ -25,6 +25,13 @@ angular.module('F1FeederApp.controllers', [])
   });
 })
 
+.factory('flag', ['countryCode', function(countryCode) {
+  if(!countryCode){return console.log('the country code is missing', countryCode, err);}
+  var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+  console.log(url);
+  return url;
+})
+
 .controller('driverController', function($scope, $routeParams, ergastAPIservice){
   $scope.id = $routeParams.id;
   $scope.races = [];
