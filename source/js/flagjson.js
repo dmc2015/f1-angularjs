@@ -258,13 +258,29 @@ var countries = {
   "Kosovo":"xk",
   "Yemen":"ye",
   "Mayotte":"yt",
-  "South Africa":"za",
+  "SouthAfrica":"za",
   "Zambia":"zm",
   "Zimbabwe":"zw"};
 
   //if (nationality[i] === )
 
   var nationality = {
+    "South": countries.SouthAfrica,
+    /*  need to make if statement in regex function
+    to see if the following word after the first matches
+    potential countries that require two words to
+    succesfully id them.
+    Exampmle: South Africa, United States, United Arab...
+    after id-ing the required
+    words the space needs to be removed between them
+    */
+    "Swedish": countries.Sweden,
+    "Turk": countries.Turkey,
+    "Turkis": countries.Turkey,
+    "Swiss": countries.Switzerland,
+    "Russian": countries.Russia,
+    "Moroccan": countries.Morocco,
+    "Austrian": countries.Austria,
     "Argentinean": countries.Argentina,
     "Spanish": countries.Spain,
     "German": countries.Germany,
@@ -275,6 +291,7 @@ var countries = {
     "Brazilian": countries.Brazil,
     "Mexican": countries.Mexico,
     "Venezuelan": countries.Venezuela,
+    "Netherlands": countries.Netherlands,
     "Dutch": countries.Netherlands,
     "Hungarian": countries.Hungary,
     "Belgian": countries.Belgium,
@@ -297,17 +314,19 @@ var countries = {
 
     if (arguments[0] === 'dTC') {
       demString = givenDemony.toString();
+      // return {nationality.demString : countries.translatesTo};
       return {demString : countries.translatesTo};
+
     }
-  else if (arguments[0] === 'cTD') {
+    else if (arguments[0] === 'cTD') {
 
     } else {
       return console.log('country not translated, please contact library creator.');
-        //alert('country not translated, please contact library creator.')
+      //alert('country not translated, please contact library creator.')
     }
 
   }
-  
+
   // var nationality = [
   // "Spanish ", countries.Spain,
   // "German || Nazi ", countries.Germany,
