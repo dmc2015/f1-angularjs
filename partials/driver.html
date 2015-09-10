@@ -2,12 +2,12 @@
 
   <a href="#/drivers"> &#60; Backto drivers list</a>
 
-  <nav id="seondary" class="main-nav">
+  <nav id="secondary" class="main-nav">
     <div class="driver-picture">
       <div class="avatar">
         <img ng-show="driver" src="source/img/drivers/{{driver.Driver.driverId}}.png"/>
         <!-- <img ng-show="driver" src="{{driver.flagUrl}}"/> <br /> -->
-        <img ng-src="{{driver.flagUrl}}"/> <br />
+        <img class="flag" ng-src="{{driver.flagUrl}}"/> <br />
         {{driver.Driver.givenName}} {{driver.Driver.familyName}}
       </div>
     </div>
@@ -20,21 +20,26 @@
     </div>
   </nav>
 
-  <div class="main-content">
-    <table class="result-table">
+  <div class="main-content table-container table-responsive">
+    <table class="table table-border table-striped table-hover result-table">
       <thead>
         <tr><th colspan="5">Formula 1 2013 Results</th></tr>
+        <!-- <tr><th colspan="5">Formula 1 {{selectedYear}} Results</th></tr> -->
+
       </thead>
       <tbody>
         <tr>
-          <td>Round</td> <td>Grand Prix</td> <td>Team</td> <td>Grid</td> <td>Race</td>
+          <th>Round</th> <th>Grand Prix</th> <th>Team</th> <th>Grid</th> <th colspan="4">Race</th>
         </tr>
         <tr ng-repeat="race in races">
           <td>{{race.round}}</td>
-          <td><img ng-src="{{race.flagUrl}}"/> {{race.raceName}}</td>
+          <td><img class="flag" ng-src="{{race.flagUrl}}"/> {{race.raceName}}</td>
 
           <!-- <td><img src="img/flags/{{race.Circuit.Location.country}}.png"/> {{race.raceName}}</td> -->
           <td>{{race.Results[0].Consturctor.name}}</td>
+          <!-- <td>{{races[0].Results[0].Constructor.name}}</td> -->
+
+          <td>{{race.Results[0].team}}</td>
           <td>{{race.Results[0].grid}}</td>
           <td>{{race.Results[0].position}}</td>
         </tr>
