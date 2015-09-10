@@ -11,7 +11,7 @@
 
 var countries = {
 "Andorra":"ad",
-"United Arab Emirates":"ae",
+"UnitedArabEmirates":"ae",
 "Afghanistan":"af",
 "Antigua and Barbuda":"ag",
 "Anguilla":"ai",
@@ -243,7 +243,7 @@ var countries = {
 "Ukraine":"ua",
 "Uganda":"ug",
 "U.S. Minor Outlying Islands":"um",
-"United States":"us",
+"UnitedStates":"us",
 "Uruguay":"uy",
 "Uzbekistan":"uz",
 "Vatican City":"va",
@@ -274,7 +274,16 @@ var nationality = {
 "Brazilian": countries.Brazil,
 "Mexican": countries.Mexico,
 "Venezuelan": countries.Venezuela,
-"Dutch": countries.Netherlands
+"Dutch": countries.Netherlands,
+"Hungarian": countries.Hungary,
+"Belgian": countries.Belgium,
+"Italian": countries.Italy,
+"Singapore": countries.Singapore,
+"Korean": countries.Korea,
+"Japanese": countries.Japan,
+"Indian": countries.India,
+"Abu Dhabi": countries.UnitedArabEmirates,
+"United States": countries.UnitedStates
 };
 
 

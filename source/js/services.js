@@ -39,9 +39,6 @@ angular.module('F1FeederApp.services', [])
   }
   return apiUrl;
 
-  console.log('this is the url of the flag', apiUrl);
-
-
 });
 
 
