@@ -53,7 +53,9 @@ angular.module('F1FeederApp.controllers', [])
 
   ergastAPIservice.getDriverDetails($scope.id).success(function (response){
     $scope.driver = response.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
-    // $scope.driver.flagUrl = flag.flagUrl;
+    console.log('this is the $scope.driver: ', $scope.driver, '   this is the driver:  ');
+    console.log('this is the nationality: ', nationality[$scope.driver.Driver.nationality]);
+     $scope.driver.flagUrl = flagUrl.getUrl(nationality[$scope.driver.Driver.nationality]);
   });
 
   // $scope.driver.forEach(function(d){

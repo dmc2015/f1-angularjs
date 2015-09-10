@@ -31,12 +31,17 @@ angular.module('F1FeederApp.services', [])
   var apiUrl = {};
 
   apiUrl.getUrl = function(countryCode) {
+    console.log('this is country code in factory', countryCode);
     if(!countryCode) {return console.log('no code', countryCode, url);}
     var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
-    console.log(url);
+    console.log('this is the url of the flag', url);
     return url;
   }
   return apiUrl;
+
+  console.log('this is the url of the flag', apiUrl);
+
+
 });
 
 
