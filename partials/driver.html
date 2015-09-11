@@ -1,6 +1,10 @@
+<div class="header">
+  <h1><a href="#/drivers"/> Formula-I 2013 Stats </a></h1>
+
+</div>
 <section id="main">
 
-  <a href="#/drivers"> &#60; Backto drivers list</a>
+  <a class="back2main" href="#/drivers"> &#60; Back to drivers list</a>
 
   <nav id="secondary" class="main-nav">
     <div class="driver-picture">
@@ -36,8 +40,8 @@
           <td><img class="flag" ng-src="{{race.flagUrl}}"/> {{race.raceName}}</td>
 
           <!-- <td><img src="img/flags/{{race.Circuit.Location.country}}.png"/> {{race.raceName}}</td> -->
-          <td>{{race.Results[0].Consturctor.name}}</td>
-          <!-- <td>{{races[0].Results[0].Constructor.name}}</td> -->
+          <!-- <td>{{race.Results[0].Consturctor.name}}</td>  not sure why this line does not work but the others do-->
+          <td>{{races[0].Results[0].Constructor.name}}</td>
 
           <td>{{race.Results[0].team}}</td>
           <td>{{race.Results[0].grid}}</td>

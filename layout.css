@@ -26,3 +26,28 @@
 .heading2{
   margin-left: 25px;
 }
+
+
+.container{
+padding: 0px;
+margin: 0 auto;
+}
+
+h1{
+  margin:0;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+}
+
+.search{
+  margin-left: 2%;
+}
+
+.main-nav{
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.back2main{
+  margin-left: 2%;
+}

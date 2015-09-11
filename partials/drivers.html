@@ -1,6 +1,9 @@
 <div class="container row">
-  <input type="text" class="search" ng-model="nameFilter" placeholder="Search..."/>
-
+  <div class="header">
+    <h1><a href="#/drivers"/> Formula-I 2013 Stats </a></h1>
+    
+    <input type="text" class="search" ng-model="nameFilter" placeholder="Search..."/>
+  </div>
   <!-- <div class="table row ">
 
   <div class="headings  col-lg-12">
@@ -41,12 +44,12 @@
   <table class="table table-border table-striped table-hover ">
     <thead>
       <tr><th class="text-center" colspan="4">Drivers Championship Standings</th></tr>
-        <tr>
-          <th>Place</th>
-          <th>Driver & Nationality</th>
-          <th col-span="4" width: "200px" >Constructor/Make</th>
-          <th>Points</th>
-        </tr>
+      <tr>
+        <th>Place</th>
+        <th>Driver & Nationality</th>
+        <th col-span="4" width: "200px" >Constructor/Make</th>
+        <th>Points</th>
+      </tr>
     </thead>
     <tbody>
       <tr ng-repeat="driver in driversList | filter: searchFilter">
@@ -54,9 +57,9 @@
         <td>
           <img class="flag" ng-src="{{driver.flagUrl}}"/>
 
-          <a href="#/drivers/{{driver.Driver.driverId}}">
+          <p><a href="#/drivers/{{driver.Driver.driverId}}">
             {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-          </a>
+          </a></p>
         </td>
 
         <td>{{driver.Constructors[0].name}}</td>
