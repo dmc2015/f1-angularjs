@@ -7,9 +7,7 @@
   margin-bottom: 1%;
 }
 
-.search{
-  margin-bottom: 2%;
-}
+
 
 .points-column{
   margin-left: 20%;
@@ -20,6 +18,43 @@
 .header-standings{
   margin-bottom: 7%;
 
+}
+
+.title-heading{
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 2%;
+  margin-right: 0 !important;
+}
+
+.redcar{
+  top: -62px;
+  height: 190px;
+  z-index: -1;
+  display: inline;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 100%;
+}
+
+@media screen and (max-width: 991px){
+  .redcar{
+    top: -91px;
+  }
+}
+
+@media screen and (max-width: 467px){
+  .redcar{
+    top: -130px;
+  }
+  .title-heading{
+    display: block !important;
+    /*top: 130px;*/
+    /*font-size: 120%;*/
+  }
 }
 
 
@@ -41,8 +76,15 @@ h1{
 
 .search{
   margin-left: 2%;
+  margin-bottom: 2%;
+  bottom: 40px;
+  position: relative;
 }
 
+.header{
+  width: 100%;
+  margin-right: 0;
+}
 .main-nav{
   margin-left: 2%;
   margin-top: 2%;

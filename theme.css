@@ -6,6 +6,12 @@ html{
   background-size: cover;
 }
 
+
+.redcar{
+  /*width: 100%;*/
+  opacity: 1;
+
+}
 body{
   /*opacity: .7;*/
 }
@@ -21,6 +27,7 @@ a{
 .header{
   background-color: black;
   font: red;
+  opacity: .9;
 }
 
 .container{
