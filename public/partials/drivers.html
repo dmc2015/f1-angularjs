@@ -1,0 +1,73 @@
+<div class="container row">
+  <div class="header">
+    <h1 class="title-heading"><a href="#/drivers"/> Formula-I 2013 Stats </a></h1>
+    <img class="redcar" ng-src="source/img/redcar.jpg" />
+
+    <input type="text" class="search" ng-model="nameFilter" placeholder="Search..."/>
+  </div>
+  <!-- <div class="table row ">
+
+  <div class="headings  col-lg-12">
+  <h1 class="text-center header-standings">Drivers Championship Standings</h1>
+  <h2 class="text-center headings">
+  <span class="driver col-sm-1 col-md-offset-1">Driver Name</span>
+  <span class="nationality col-sm-1 col-md-offset-1">Driver Nationality</span>
+  <span class="make col-sm-1 col-md-offset-1">Constructor/Make</span>
+  <span class="points-column col-sm-1 col-md-offset-1">Points</span>
+</h2>
+
+</div>
+
+<div class="table">
+
+<div class="driver-info" ng-repeat="driver in driversList | filter: searchFilter">
+<div class="driver-num"> {{$index + 1}}</div>
+<div>
+<img class="flag" ng-src="{{driver.flagUrl}}"/>
+</div>
+
+<div>
+<a class="btn btn-primary " href="#/drivers/{{driver.Driver.driverId}}">
+{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+</a>
+</div>
+
+<div class="">{{driver.Constructors[0].name}}</div>
+<div class="points">{{driver.points}}</div>
+</div>
+
+</div>
+
+</div> -->
+
+
+<div class="table-container table-responsive col-lg-12 col-md-12">
+  <table class="table table-border table-striped table-hover ">
+    <thead>
+      <tr><th class="text-center" colspan="4">Drivers Championship Standings</th></tr>
+      <tr>
+        <th>Place</th>
+        <th>Driver & Nationality</th>
+        <th col-span="4" width: "200px" >Constructor/Make</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="driver in driversList | filter: searchFilter">
+        <td>{{$index + 1}}</td>
+        <td>
+          <img class="flag" ng-src="{{driver.flagUrl}}"/>
+
+          <p><a href="#/drivers/{{driver.Driver.driverId}}">
+            {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+          </a></p>
+        </td>
+
+        <td>{{driver.Constructors[0].name}}</td>
+        <td>{{driver.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
