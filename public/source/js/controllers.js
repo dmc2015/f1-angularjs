@@ -22,7 +22,7 @@ angular.module('F1FeederApp.controllers', [])
 
 // .factory('flag', [ function flagUrl(countryCode) {
 //   if(!countryCode){return;}// console.log('the country code is missing', countryCode);}
-//   var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+//   var url = "////www.geonames.org/flags/x/" + countryCode + ".gif";
 //   console.log(url);
 //   return url;
 // }])
@@ -46,7 +46,7 @@ angular.module('F1FeederApp.controllers', [])
   // // console.log( raceCountry );
   //
   // if(!countryCode) {return console.log('no code', countryCode, url);}
-  // var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+  // var url = "////www.geonames.org/flags/x/" + countryCode + ".gif";
   // console.log(url);
   // return url;
   //}
@@ -97,7 +97,7 @@ angular.module('F1FeederApp.controllers', [])
 
     // function flagUrl(countryCode){
     //   if(!countryCode) {return;}
-    //   var url = "http://www.geonames.org/flags/x/" + countryCode + ".gif";
+    //   var url = "////www.geonames.org/flags/x/" + countryCode + ".gif";
     //   console.log(url);
     //   return url;
     // }
