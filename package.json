@@ -2,7 +2,7 @@
   "name": "toptal-first-angular-app",
   "version": "1.0.0",
   "description": "toptal-first-angularjs",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/bower/bin/bower install"
@@ -31,7 +31,7 @@
     "jshint-stylish": "^2.0.1"
   },
   "dependencies": {
-    "express": "^4.13.3",
-    "bower": "0.6.x"
+    "bower": "^1.5.2",
+    "express": "^4.13.3"
   }
 }
